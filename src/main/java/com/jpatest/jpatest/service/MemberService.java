@@ -24,6 +24,7 @@ public class MemberService {
         Member member = memberRepository.findByMemberIdAndPassword(
                 memberDto.getMemberId(), memberDto.getPassword()
         );
+
         if(member == null)
             return false;
         return true;
